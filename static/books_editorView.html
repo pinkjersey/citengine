@@ -1,0 +1,36 @@
+<div class="panel-body">
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label class="control-label col-sm-2">Page Link:</label>
+            <div class="col-sm-4">
+                <input class="form-control" ng-model="currentProduct.pageLink" />
+            </div>
+            <button class="btn btn-primary col-sm-1" ng-click="generatePageLink(currentProduct)">Generate</button>
+            <label class="control-label col-sm-1">ISBN:</label>
+            <div class="col-sm-4">
+                <input class="form-control" ng-model="currentProduct.isbn" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Name:</label>
+            <div class="col-sm-4">
+                <input class="form-control" ng-model="currentProduct.name" />
+            </div>
+            <label class="control-label col-sm-2">Priority:</label>
+            <div class="col-sm-4">
+                <input class="form-control" ng-model="currentProduct.priority" type="number" min="0.0" max="1.0" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Image:</label>
+            <div class="col-sm-4">
+                <input class="form-control" ng-model="currentProduct.image" />
+            </div>
+            <div class="checkbox col-sm-offset-2 col-sm-4">
+                <label><input type="checkbox" ng-model="currentProduct.featured">Featured</label>
+            </div>
+        </div>
+        <button class="btn btn-primary" ng-click="saveEdit(currentProduct)">Save</button>
+        <button class="btn btn-primary" ng-click="cancelEdit()">Cancel</button>
+    </form>
+</div>

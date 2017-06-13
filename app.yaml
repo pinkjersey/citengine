@@ -1,0 +1,76 @@
+application: citengine
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+
+# 
+# STATIC
+#
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt
+
+- url: /favicon.jpg
+  static_files: favicon.jpg
+  upload: favicon.jpg
+
+- url: /images
+  static_dir: images
+  login: admin
+
+- url: /stylesheets
+  static_dir: stylesheets
+  login: admin
+
+- url: /js
+  static_dir: js
+  login: admin
+
+#
+# Admin pages
+#
+- url: /admin
+  static_files: static/index.html
+  upload: static/index.html
+  login: admin
+
+# books
+- url: /books.html
+  static_files: static/books.html
+  upload: static/books.html
+  login: admin
+
+- url: /books_tableView.html
+  static_files: static/books_tableView.html
+  upload: static/books_tableView.html
+  login: admin
+
+- url: /books_editorView.html
+  static_files: static/books_editorView.html
+  upload: static/books_editorView.html
+  login: admin
+
+- url: /books
+  script: books.app
+  login: admin
+
+- url: /books/.*
+  script: books.app
+  login: admin  
+
+# authors
+- url: /authors.html
+  static_files: static/authors.html
+  upload: static/authors.html
+  login: admin
+
+- url: .*
+  script: main.app
+
+
+libraries:
+- name: webapp2
+  version: "2.5.2"

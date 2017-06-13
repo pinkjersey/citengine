@@ -1,0 +1,92 @@
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: small;
+    margin: 0px;
+}
+
+#header {
+    margin: 10px;
+    height: 108px;
+}
+
+#content {
+    width: 700px;
+    margin: 10px;
+    padding: 5px;
+}
+
+#sidebar {
+    font-size: 105%;
+    padding: 15px;
+    margin: 0px 10px 10px 10px;
+    width: 170px;
+    float: left;
+}   
+
+#main {
+    font-size: 105%;
+    padding: 15px;
+    margin: 0px 10px 10px 220px;
+}
+
+#footer {
+    color: #efe5d0;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+    font-size: 90%;
+}
+
+h1 {
+    font-size: 120%;
+    color: #954b4b;
+} 
+
+h2 {
+    font-size: 110%;
+    color: #954b4b;
+} 
+
+ul li h2 {
+    font-size: 110%;
+    color: #954b4b;
+    display: inline;
+}
+
+a:link {
+    color: #b76666;
+    text-decoration: none;
+    border-bottom: thin dotted #b76666;
+}
+
+a:visited {
+    color: #675c47;
+    text-decoration: none;
+    border-bottom: thin dotted #675c47;
+}
+
+.nobr { white-space:nowrap; }
+
+table.mtl {
+	border-width: 1px;
+	border-spacing: 0px;
+	border-style: dotted;
+	border-color: gray;
+	border-collapse: collapse;
+	background-color: white;
+	font-family: Lucidatypewriter, monospace
+}
+table.mtl th {
+	border-width: 1px;
+	padding: 5px;
+	border-style: dotted;
+	border-color: gray;
+	background-color: rgb(250, 240, 230);
+}
+table.mtl td {
+	border-width: 1px;
+	padding: 5px;
+	border-style: dotted;
+	border-color: gray;
+	background-color: rgb(250, 240, 230);
+}

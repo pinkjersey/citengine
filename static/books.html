@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="booksApp">
+<head>
+    <title>Kitap Listesi</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="stylesheets/custom.css">
+    <script src="js/books.js"></script>
+    <script type="text/javascript" src="js/hashids.min.js"></script>
+</head>
+<body ng-controller="booksCtrl">
+    <div class="panel panel-primary">
+        <h3 class="panel-heading">Kitap Listesi</h3>
+        <ng-include src="'books_tableView.html'" ng-show="displayMode == 'list'"></ng-include>
+        <ng-include src="'books_editorView.html'" ng-show="displayMode == 'edit'"></ng-include>
+    </div>
+</body>
+</html>
